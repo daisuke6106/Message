@@ -1,4 +1,4 @@
-package jp.co.dk.message.test;
+package jp.co.dk.message;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

@@ -1,4 +1,4 @@
-package jp.co.dk.message.test;
+package jp.co.dk.message;
 
 import static org.junit.Assert.*;
 
