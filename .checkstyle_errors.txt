@@ -1,0 +1,256 @@
+Starting audit...
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:24: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:26: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:28: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:37: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:41: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:48: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:50: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:55: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:57: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:62: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:64: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:69: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:70: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:71: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:76: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:100: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:101: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:107:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:107:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:107:26: 変数 'messageId' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:109:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:110: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:111: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:113: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:115: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:118:35: Parameter messageId should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:118:42: 'messageId' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:121: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:124: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:125: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:127: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:129: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:133:35: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:133:48: Parameter messageId should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:133:55: 'messageId' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:137: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:138:9: メソッド 'getMessageId' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:142: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:143:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:147: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:148:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:149:34: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:154: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:155:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:156:34: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:157: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:159: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:160:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/AbstractMessage.java:161:34: Parameter list should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:10: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:11: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:15: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:21:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:21:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:21:24: 変数 'resouceBundle' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:22: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:23: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:29:21: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:33: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:34: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:40:21: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:40:34: Parameter locale should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:40:41: 'locale' には @param タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:44: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:45: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:51:21: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:55: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:56: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:62:21: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:62:32: Parameter locale should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:62:39: 'locale' には @param タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:66: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:67: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:69: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:73:27: Parameter messageId should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:73:34: 'messageId' には @param タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:76: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:77: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:79: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:80:12: 'str' に対する使用されない @param タグです。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:83: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:83:27: Parameter messageId should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:83:34: 'messageId' には @param タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:83:45: Parameter replaceList should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:83:58: 'replaceList' には @param タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:93: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:94: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:96: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:99: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:101: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:107: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:108: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:110: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:113: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:115: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:121: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:122:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:122:36: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:126:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFile.java:126:36: Parameter file should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:7: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:8: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:11: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:13: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:17: クラス MessageFlyweight は final として宣言すべきです。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:19:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:19:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:25: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:27: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:28: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:30: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:34:53: Parameter baseName should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:37: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:38: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:40: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:45: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:45:53: Parameter baseName should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:45:70: Parameter locale should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:46: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:5: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:7: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:12: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:12:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:13: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:15: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:18:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:19: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:22: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:25:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:26: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:27: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:29: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:32: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:32:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:33: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:34: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:36: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:39: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:39:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:40: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:41: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:43: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:46: @return タグが必要です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:46:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:47: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:9: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:10: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:11: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:16: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:16:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:17: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:21: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:22:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:23: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:24:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:25: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:26:9: Javadoc コメントがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:27: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:28: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:29: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:31: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:33: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:37:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:37:62: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:41: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:42: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:44: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:46: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:51:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:51:63: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:51:74: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:58: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:59: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:61: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:63: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:68: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:68:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:68:63: Parameter list should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:68:81: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:73: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:74: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:76: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:78: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:83:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:83:63: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:83:76: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:88: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:89: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:90: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:92: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:94: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:99: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:99:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:99:63: Parameter throwable should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:99:73: 'throwable' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:99:83: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:104: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:105: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:107: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:109: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115:63: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115:75: Parameter throwable should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115:85: 'throwable' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:115:95: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:122: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:123: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:125: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:126: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:128: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:130: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:63: Parameter list should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:81: ',' の後にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:81: Parameter throwable should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:91: 'throwable' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:136:101: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:142: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:143: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:145: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:147: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153:41: Parameter msg should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153:63: Parameter str should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153:77: Parameter throwable should be final.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153:87: 'throwable' がフィールドを隠しています。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:153:97: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:159: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:160: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:162: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:165:9: メソッド 'getMessageObj' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:168: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:169: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:171: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:173: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:177:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:184: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:185: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:187: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:189: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:193:9: メソッド 'getEmbeddedStrList' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:196: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:197: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:199: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:201: Line has trailing spaces.
+/home/dk/projects/Message/src/jp/co/dk/message/exception/AbstractMessageException.java:205:9: メソッド 'getThrowable' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/package-info.java:0: ファイルが新しい行で終了していません。
+/home/dk/projects/Message/src/jp/co/dk/message/exception/package-info.java:1: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/projects/Message/src/jp/co/dk/message/package-info.java:0: ファイルが新しい行で終了していません。
+/home/dk/projects/Message/src/jp/co/dk/message/package-info.java:1: 最初の一文はピリオドで終わらなければなりません。
+Audit done.
