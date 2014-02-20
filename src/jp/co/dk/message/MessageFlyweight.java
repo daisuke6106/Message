@@ -16,10 +16,9 @@ import java.util.Map;
  */
 class MessageFlyweight {
 
-	private static Map<String, Map<Locale, MessageFile>> messageFileMap;
+	protected static Map<String, Map<Locale, MessageFile>> messageFileMap;
 
-	private MessageFlyweight() {
-	}
+	private MessageFlyweight() {}
 
 	static {
 		messageFileMap = new HashMap<String, Map<Locale, MessageFile>>();

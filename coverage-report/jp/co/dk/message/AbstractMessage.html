@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - AbstractMessage.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Message/src/jp/co/dk/message/AbstractMessage.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package jp.co.dk.message;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * AbstractMessageは、メッセージを列挙する定数クラスが実装する基底クラスです。&lt;p>
+ * &lt;br>
+ * 指定されたメッセージIDをもとに、プロパティファイルよりメッセージ本文を取得します。&lt;br>
+ * &lt;br>
+ * メッセージ本文を取得時にメッセージの一部を指定の文字列に書き換えることができます。&lt;br>
+ * その場合、メッセージ本文の置換したい一部分を{0}等、{数字}という形式にて定義してください。&lt;br>
+ * &lt;br>
+ * メッセージ取得時のメソッドに埋め込み文字列を渡すことによって埋め込み文字列によって置換したメッセージ本文を受け取ることができます。&lt;br>
+ * 埋め込み文字列が複数ある場合、Listや配列にて渡すことにで複数の埋込み文字列に対応することができます。&lt;br>
+ * その際には、Listや配列の要素番号が{数字}に定義された数字に紐づいて置換処理が行われます。
+ * &lt;br>
+ * プロパティファイルの指定方法&lt;br>
+ * &lt;br>
+ * プロパティファイルを指定する場合はコンストラクタにファイルパスを指定してください。
+ * 省略された場合、本抽象クラスを実装しているクラスがあるパッケージ内にあるメッセージプロパティファイルが使用されます。
+ * &lt;br>
+ * 地域化リソースにも対応しており、プログラム実行時の地域設定を切り替えることによってプログラム内部に変更を加えることなくメッセージ本文を日本語・英語等、各地域言語によって出力することが可能です。&lt;br>
+ * &lt;br>
+ * 地域切り替え設定はシステムプロパティーのuser.language（日本ならja）、user.country（日本ならJP）、user.variant（日本なら空文字列）を使って生成される。&lt;br>
+ * 日本の場合は「ja_JP」になる。&lt;br>
+ * &lt;br> 
+ * 実行環境が日本の場合、まず、ファイル名に「_ja_JP」が付いたプロパティーファイルがあればそれを読み込みます。&lt;br>
+ * 無い場合、ファイル名に「_ja」が付いたプロパティーファイルがあればそれを読み込みます。&lt;br>
+ * （ja_JPやjaは、大文字でも小文字でも可能）&lt;br>
+ * それも無ければ、ファイル名そのもののプロパティーファイルを読み込みます。&lt;br>
+ * &lt;br>
+ * ・メッセージ定義例&lt;br>
+ * 実行例、実行結果は以下の通りです。&lt;br>
+ * &lt;code>
+ * TestMessage.java -----------------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * public class TestMessage extends AbstractMessage {&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;// メッセージ本文 &lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;public static final TEST_MESSAGE = new TestMessage("MESSAGE_ID_01");&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;// コンストラクタ&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;protected ConsoleMessage(String messageId) {&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(messageId);&lt;br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;}&lt;br>
+ * }&lt;br>
+ * ----------------------------------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * TestMessage.properties -----------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * # メッセージ&lt;br>
+ * MESSAGE_ID_01=デフォルトのテストメッセージです。&lt;br>
+ * &lt;br>
+ * ----------------------------------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * TestMessage_ja.properties --------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * # メッセージ&lt;br>
+ * MESSAGE_ID_01=jaのテストメッセージです。&lt;br>
+ * &lt;br>
+ * ----------------------------------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * TestMessage_ja_JP.properties --------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * # メッセージ&lt;br>
+ * MESSAGE_ID_01=ja_JPのテストメッセージです。&lt;br>
+ * &lt;br>
+ * ----------------------------------------------------------------------------------------&lt;br>
+ *&lt;br> 
+ * TestMessage_us.properties --------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * # Message&lt;br>
+ * MESSAGE_ID_01=This is Test Message.&lt;br>
+ * &lt;br>
+ * ----------------------------------------------------------------------------------------&lt;br>
+ * &lt;br>
+ * 上記のプログラムを準備した状況にて以下のシステムプロパティを指定した場合の出力例は以下のとおりです。&lt;br>
+ * &lt;br>
+ * ① user.language、user.countryを両方指定した場合、&lt;br>
+ * 　 java -Duser.language=ja,user.country=JP ...&lt;br>
+ *    &lt;br>
+ *    実行結果=ja_JPのテストメッセージです。&lt;br>
+ * &lt;br>
+ * ② user.languageのみ指定した場合、&lt;br>
+ * 　 java -Duser.language=ja ...&lt;br>
+ *    &lt;br>
+ *    実行結果=jaのテストメッセージです。&lt;br>
+ * &lt;br>
+ * ③ user.languageをusなどja以外を指定した場合、&lt;br>
+ * 　 java -Duser.language=us ...&lt;br>
+ *    &lt;br>
+ *    実行結果=This is Test Message.&lt;br>
+ * &lt;br>
+ * ④ システムプロパティを指定しなかった場合、&lt;br>
+ * 　 java ...&lt;br>
+ *    &lt;br>
+ *    実行結果=デフォルトのテストメッセージです。&lt;br>
+ * &lt;br>
+ * 
+ * &lt;/code> 
+ * @version 1.0
+ * @author D.Kanno
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>105</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public abstract class AbstractMessage implements MessageInterface {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>107</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 47 Writes: 8'>messageId</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>109</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private MessageFile <span class='instance covered' title='Reads: 44 Writes: 8'>messageFile</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定されたメッセージIDをもとにメッセージ定数クラスを生成します。
+	 * 
+	 * @param messageId メッセージID
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>118</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l118s0'>	protected AbstractMessage(String messageId) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l119s0'>		this.messageId = messageId;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l120s0'>		StringBuilder sb = new StringBuilder();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>121</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l121s0'>		sb.append(this.getClass().getName().replace('.', '/'));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>122</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l122s0'>		this.messageFile = MessageFlyweight.getInstance(sb.toString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>123</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l123s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定されたメッセージプロパティファイルパス、メッセージIDをもとにメッセージ定数クラスを生成します。
+	 * 
+	 * @param file      メッセージプロパティファイルパス
+	 * @param messageId メッセージID
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>133</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l133s0'>	protected AbstractMessage(String file, String messageId) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>134</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l134s0'>		this.messageId = messageId;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>135</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l135s0'>		this.messageFile = MessageFlyweight.getInstance(file);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>136</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l136s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>138</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>139</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessageId() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>140</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l140s0'>		return this.messageId;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>141</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>143</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>144</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessage() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>145</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l145s0'>		return messageFile.getMessage(this.messageId);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>146</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>148</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>149</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessage(String str) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>150</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l150s0'>		List&lt;String> list = new ArrayList&lt;String>();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>151</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l151s0'>		list.add(str);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>152</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l152s0'>		return messageFile.getMessage(this.messageId, list);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>153</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>155</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>156</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessage(String[] str) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>157</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l157s0'>		return messageFile.getMessage(this.messageId, Arrays.asList(str));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>158</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>160</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>161</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessage(List&lt;String> list) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>162</td><td class='count'>19</td>
+      <td><pre class='prettyprint covered' id='l162s0'>		return messageFile.getMessage(this.messageId, list);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>163</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>164</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

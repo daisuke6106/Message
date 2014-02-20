@@ -1,0 +1,46 @@
+package jp.co.dk.message;
+
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import jp.co.dk.test.template.TestCaseTemplate;
+
+import org.junit.Test;
+
+public class TestMessageFlyweight extends TestCaseTemplate {
+
+	@Test
+	public void getInstance() {
+		// 空の状態でgetInstanceを実行した場合、キャッシュに保持された上でMessageFileインスタンスが返却されること。
+		// キャッシュインスタンスを初期化
+		MessageFlyweight.messageFileMap = new HashMap<String, Map<Locale, MessageFile>>();
+		// getInstanceを実行
+		MessageFile messageFile = MessageFlyweight.getInstance("jp/co/dk/message/TestMessage.properties");
+		// キャッシュに保持されたインスタンスを取得し、インスタンスが一致するか確認
+		Map<Locale, MessageFile> messageFileMap = MessageFlyweight.messageFileMap.get("jp/co/dk/message/TestMessage.properties");
+		assertThat(messageFileMap.size(), is (1));
+		assertThat(messageFileMap.get(Locale.getDefault()), is (messageFile));
+		
+		
+		// キャッシュされている状態でgetInstanceを実行した場合、キャッシュに保存されたMessageFileインスタンスが返却されること。
+		// キャッシュインスタンスを初期化
+		// getInstanceを実行
+		messageFile = MessageFlyweight.getInstance("jp/co/dk/message/TestMessage.properties");
+		// キャッシュに保持されたインスタンスを取得し、インスタンスが一致するか確認
+		messageFileMap = MessageFlyweight.messageFileMap.get("jp/co/dk/message/TestMessage.properties");
+		assertThat(messageFileMap.size(), is (1));
+		assertThat(messageFileMap.get(Locale.getDefault()), is (messageFile));
+		
+		// キャッシュされている状態でgetInstanceを実行した場合、キャッシュに保存されたMessageFileインスタンスが返却されること。
+		// キャッシュインスタンスを初期化
+		// getInstanceを実行
+		messageFile = MessageFlyweight.getInstance("jp/co/dk/message/TestMessage.properties", Locale.US);
+		// キャッシュに保持されたインスタンスを取得し、インスタンスが一致するか確認
+		messageFileMap = MessageFlyweight.messageFileMap.get("jp/co/dk/message/TestMessage.properties");
+		assertThat(messageFileMap.size(), is (2));
+		assertThat(messageFileMap.get(Locale.US), is (messageFile));
+		
+	}
+
+}

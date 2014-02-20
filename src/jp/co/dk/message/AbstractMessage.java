@@ -118,7 +118,7 @@ public abstract class AbstractMessage implements MessageInterface {
 	protected AbstractMessage(String messageId) {
 		this.messageId = messageId;
 		StringBuilder sb = new StringBuilder();
-		sb.append(this.getClass().getName().replace('.', '/')).append(".properties");
+		sb.append(this.getClass().getName().replace('.', '/'));
 		this.messageFile = MessageFlyweight.getInstance(sb.toString());
 	}
 	

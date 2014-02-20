@@ -7,18 +7,18 @@ import java.util.List;
 import jp.co.dk.message.MessageInterface;
 
 /**
- * AbstractMessageExceptionは、MessageInterfaceを実装したメッセージ定数クラスにて例外を発生させる際に使用する例外抽象クラスです。<p>
+ * AbstractMessageFatalExceptionは、MessageInterfaceを実装したメッセージ定数クラスにて致命的例外を発生させる際に使用する致命的例外抽象クラスです。<p>
  * 
  * @version 1.0
  * @author D.Kanno
  */
-public abstract class AbstractMessageException extends Exception {
+public abstract class AbstractMessageFatalException extends RuntimeException {
 	
 	/**
 	 * シリアルバージョンID
 	 */
-	private static final long serialVersionUID = -8210140855575484842L;
-	
+	private static final long serialVersionUID = -7091947384630633864L;
+
 	private MessageInterface messageObj;
 	
 	private List<String> embeddedStrList;
@@ -34,7 +34,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param msg メッセージ定数インスタンス
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg){
+	public AbstractMessageFatalException(MessageInterface msg){
 		super(msg.getMessage());
 		this.messageObj = msg;
 	}
@@ -48,7 +48,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param str メッセージ埋め込み文字列
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, String str){
+	public AbstractMessageFatalException(MessageInterface msg, String str){
 		super(msg.getMessage(str));
 		this.messageObj = msg;
 		List<String> list = new ArrayList<String>();
@@ -65,7 +65,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param list メッセージ埋め込み文字列一覧
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, List<String> list){
+	public AbstractMessageFatalException(MessageInterface msg, List<String> list){
 		super(msg.getMessage(list));
 		this.messageObj      = msg;
 		this.embeddedStrList = list;
@@ -80,7 +80,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param str メッセージ埋め込み文字列一覧
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, String[] str){
+	public AbstractMessageFatalException(MessageInterface msg, String[] str){
 		super(msg.getMessage(str));
 		this.messageObj      = msg;
 		this.embeddedStrList = Arrays.asList(str);
@@ -96,7 +96,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, Throwable throwable){
+	public AbstractMessageFatalException(MessageInterface msg, Throwable throwable){
 		super(msg.getMessage(), throwable);
 		this.messageObj = msg;
 		this.throwable  = throwable;
@@ -112,7 +112,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, String str, Throwable throwable){
+	public AbstractMessageFatalException(MessageInterface msg, String str, Throwable throwable){
 		super(msg.getMessage(str), throwable);
 		this.messageObj      = msg;
 		List<String> list = new ArrayList<String>();
@@ -133,7 +133,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, List<String> list,Throwable throwable){
+	public AbstractMessageFatalException(MessageInterface msg, List<String> list,Throwable throwable){
 		super(msg.getMessage(list), throwable);
 		this.messageObj      = msg;
 		this.embeddedStrList = list;
@@ -150,7 +150,7 @@ public abstract class AbstractMessageException extends Exception {
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public AbstractMessageException(MessageInterface msg, String[] str, Throwable throwable){
+	public AbstractMessageFatalException(MessageInterface msg, String[] str, Throwable throwable){
 		super(msg.getMessage(str), throwable);
 		this.messageObj      = msg;
 		this.embeddedStrList = Arrays.asList(str);

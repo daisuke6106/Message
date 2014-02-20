@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - AbstractMessageException.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Message/src/jp/co/dk/message/exception/AbstractMessageException.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package jp.co.dk.message.exception;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import jp.co.dk.message.MessageInterface;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * AbstractMessageExceptionは、MessageInterfaceを実装したメッセージ定数クラスにて例外を発生させる際に使用する例外抽象クラスです。&lt;p>
+ * 
+ * @version 1.0
+ * @author D.Kanno
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public abstract class AbstractMessageException extends Exception {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * シリアルバージョンID
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private static final long serialVersionUID = -8210140855575484842L;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private MessageInterface <span class='instance covered' title='Reads: 16 Writes: 8'>messageObj</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private List&lt;String> <span class='instance covered' title='Reads: 28 Writes: 6'>embeddedStrList</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private Throwable <span class='instance covered' title='Reads: 12 Writes: 4'>throwable</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージで例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l38s0'>		super(msg.getMessage());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l39s0'>		this.messageObj = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l40s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージで例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param str メッセージ埋め込み文字列
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, String str){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l52s0'>		super(msg.getMessage(str));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l53s0'>		this.messageObj = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l54s0'>		List&lt;String> list = new ArrayList&lt;String>();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l55s0'>		list.add(str);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l56s0'>		this.embeddedStrList = list;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l57s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、埋め込み文字列一覧で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param list メッセージ埋め込み文字列一覧
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>68</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, List&lt;String> list){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>69</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l69s0'>		super(msg.getMessage(list));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l70s0'>		this.messageObj      = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l71s0'>		this.embeddedStrList = list;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l72s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、埋め込み文字列一覧で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param str メッセージ埋め込み文字列一覧
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, String[] str){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l84s0'>		super(msg.getMessage(str));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l85s0'>		this.messageObj      = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l86s0'>		this.embeddedStrList = Arrays.asList(str);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l87s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、例外で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param throwable 例外インスタンス
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, Throwable throwable){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>100</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l100s0'>		super(msg.getMessage(), throwable);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>101</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l101s0'>		this.messageObj = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>102</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l102s0'>		this.throwable  = throwable;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>103</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l103s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、埋め込み文字列、例外で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param str メッセージ埋め込み文字列
+	 * @param throwable 例外インスタンス
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, String str, Throwable throwable){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>116</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l116s0'>		super(msg.getMessage(str), throwable);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>117</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l117s0'>		this.messageObj      = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>118</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l118s0'>		List&lt;String> list = new ArrayList&lt;String>();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l119s0'>		list.add(str);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l120s0'>		this.embeddedStrList = list;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>121</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l121s0'>		this.throwable       = throwable;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>124</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l124s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、埋め込み文字列一覧、例外で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param list メッセージ埋め込み文字列一覧
+	 * @param throwable 例外インスタンス
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>136</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, List&lt;String> list,Throwable throwable){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>137</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l137s0'>		super(msg.getMessage(list), throwable);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>138</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l138s0'>		this.messageObj      = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>139</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l139s0'>		this.embeddedStrList = list;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>140</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l140s0'>		this.throwable       = throwable;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>141</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l141s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定のメッセージ、埋め込み文字列一覧、例外で例外を生成します。
+	 * 
+	 * @param msg メッセージ定数インスタンス
+	 * @param str メッセージ埋め込み文字列一覧
+	 * @param throwable 例外インスタンス
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>153</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public AbstractMessageException(MessageInterface msg, String[] str, Throwable throwable){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>154</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l154s0'>		super(msg.getMessage(str), throwable);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>155</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l155s0'>		this.messageObj      = msg;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>156</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l156s0'>		this.embeddedStrList = Arrays.asList(str);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>157</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l157s0'>		this.throwable       = throwable;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>158</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l158s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * メッセージオブジェクトを取得します。&lt;p>
+	 * 
+	 * @return メッセージオブジェクト
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>165</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public MessageInterface getMessageObj() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>166</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l166s0'>		return this.messageObj;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>167</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * メッセージ本文を取得します。&lt;p>
+	 * 
+	 * 埋め込み文字列にて変換されたメッセージ本文を取得します。
+	 * 
+	 * @return メッセージ本文
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>177</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getMessage() {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>8</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l178s0 l179s0')">A: 6</span>
+        <span class='covered' onclick="showPath(this,'l178s0 l181s0')">B: 2</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>178</td><td class='count'>8</td>
+      <td><pre class='prettyprint jmp'>		<span id='l178s0' title='Executions: 8' class='covered'>if (this.embeddedStrList != null)</span> <span id='l178s1' title='Executions: 6' class='covered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>179</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l179s0'>			return this.messageObj.getMessage(this.embeddedStrList);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>180</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		} else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>181</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l181s0'>			return this.messageObj.getMessage();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>182</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>183</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * メッセージ本文への埋込み文字列を取得します。&lt;p>
+	 * 
+	 * メッセージ本文への埋込み文字列のコピーを取得します。
+	 * 埋込み文字列がない場合、空のリストを返却します。
+	 * 
+	 * @return メッセージ本文
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>194</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public List&lt;String> getEmbeddedStrList() {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>8</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l195s0 l195s1')">A: 2</span>
+        <span class='covered' onclick="showPath(this,'l195s0 l196s0')">B: 6</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>195</td><td class='count'>8</td>
+      <td><pre class='prettyprint jmp'>		<span id='l195s0' title='Executions: 8' class='covered'>if (this.embeddedStrList == null)</span> <span id='l195s1' title='Executions: 2' class='covered'>return new ArrayList&lt;String>();</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>196</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l196s0'>		return new ArrayList&lt;String>(this.embeddedStrList);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>197</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * 例外オブジェクトを取得します。&lt;p>
+	 * 
+	 * 本例外クラスに保持している例外オブジェクトを取得します。
+	 * 保持している例外がない場合、nullを返却します。
+	 * 
+	 * @return 例外オブジェクト
+	 * @since 1.0
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>208</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Throwable getThrowable() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>209</td><td class='count'>12</td>
+      <td><pre class='prettyprint covered' id='l209s0'>		return this.throwable;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>210</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>211</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

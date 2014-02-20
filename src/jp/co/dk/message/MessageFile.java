@@ -26,31 +26,8 @@ class MessageFile {
 	 * 指定のメッセージプロパティファイルにてメッセージファイルのインスタンスを生成します。
 	 * @param file メッセージプロパティファイル
 	 */
-	MessageFile(String file) {
-		String baseName = this.getBaseName(file);
-		this.resouceBundle = ResourceBundle.getBundle(baseName);
-	}
-	
-	/**
-	 * コンストラクタ<p>
-	 * <br>
-	 * 指定のメッセージプロパティファイル、ロケールにてメッセージファイルのインスタンスを生成します。
-	 * @param file メッセージプロパティファイル
-	 */
-	MessageFile(String file, Locale locale) {
-		String baseName = this.getBaseName(file);
-		this.resouceBundle = ResourceBundle.getBundle(baseName, locale);
-	}
-	
-	/**
-	 * コンストラクタ<p>
-	 * <br>
-	 * 指定のメッセージプロパティファイルにてメッセージファイルのインスタンスを生成します。
-	 * @param file メッセージプロパティファイル
-	 */
 	MessageFile(File file) {
-		String baseName = this.getBaseName(file);
-		this.resouceBundle = ResourceBundle.getBundle(baseName);
+		this(file, Locale.getDefault());
 	}
 	
 	/**
@@ -60,6 +37,31 @@ class MessageFile {
 	 * @param file メッセージプロパティファイル
 	 */
 	MessageFile(File file, Locale locale) {
+		if (file == null) throw new java.lang.IllegalArgumentException("File, which is the argument has not been set.");
+		if (locale == null) throw new java.lang.IllegalArgumentException("Local is not set.");
+		String baseName = this.getBaseName(file.getPath());
+		this.resouceBundle = ResourceBundle.getBundle(baseName, locale);
+	}
+	
+	/**
+	 * コンストラクタ<p>
+	 * <br>
+	 * 指定のメッセージプロパティファイルにてメッセージファイルのインスタンスを生成します。
+	 * @param file メッセージプロパティファイル
+	 */
+	MessageFile(String file) {
+		this(file, Locale.getDefault());
+	}
+	
+	/**
+	 * コンストラクタ<p>
+	 * <br>
+	 * 指定のメッセージプロパティファイル、ロケールにてメッセージファイルのインスタンスを生成します。
+	 * @param file メッセージプロパティファイル
+	 */
+	MessageFile(String file, Locale locale) {
+		if (file == null || file.equals("")) throw new java.lang.IllegalArgumentException("File, which is the argument has not been set.");
+		if (locale == null) throw new java.lang.IllegalArgumentException("Local is not set.");
 		String baseName = this.getBaseName(file);
 		this.resouceBundle = ResourceBundle.getBundle(baseName, locale);
 	}
@@ -82,11 +84,16 @@ class MessageFile {
 	 */
 	String getMessage(String messageId, List<String> replaceList) {
 		String message = this.getMessage(messageId);
+		if (replaceList == null) return message;
 		for (int i = 0; i < replaceList.size(); i++) {
 			String param = replaceList.get(i);
 			StringBuilder sb = new StringBuilder();
 			sb.append('{').append(i).append('}');
-			message = message.replace(sb.toString(), param);
+			if (param != null) {
+				message = message.replace(sb.toString(), param);
+			} else {
+				message = message.replace(sb.toString(), "null");
+			}
 		}
 		return message;
 	}
@@ -114,17 +121,16 @@ class MessageFile {
 		List<String> keyList = new ArrayList<String>();
 		for (Enumeration<String> enumerations = this.resouceBundle.getKeys(); enumerations
 				.hasMoreElements();) {
-			keyList.add(enumerations.nextElement());
+			keyList.add(this.resouceBundle.getString(enumerations.nextElement()));
 		}
 		return keyList;
 	}
 	
-	private String getBaseName(File file) {
-		return this.getBaseName(file.getPath());
-	}
-
-	private String getBaseName(String file) {
-		file = file.substring(0, file.lastIndexOf('.'));
+	protected String getBaseName(String file) {
+		if (file == null || file.equals("")) throw new java.lang.IllegalArgumentException("File, which is the argument has not been set.");
+		if (file.split("\\.").length > 2) throw new java.lang.IllegalArgumentException("Dot has multiple definitions. Please specify a backslash or slash directory");
+		int index = file.lastIndexOf('.');
+		if (index != -1) file = file.substring(0, index);
 		file = file.replace('/', '.').replace('\\', '.');
 		return file;
 	}
