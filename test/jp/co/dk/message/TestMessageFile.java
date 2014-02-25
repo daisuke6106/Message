@@ -243,10 +243,10 @@ public class TestMessageFile extends TestCaseTemplate{
 		// メッセージIDの一覧が返却されること
 		try {
 			List<String> actual = messageFile.getKeyList();
-			assertThat(actual.contains("M0001"), is (true));
-			assertThat(actual.contains("M0002"), is (true));
-			assertThat(actual.contains("M0003"), is (true));
-			assertThat(actual.size(), is (3));
+			assertThat(new Boolean(actual.contains("M0001")), is (new Boolean(true)));
+			assertThat(new Boolean(actual.contains("M0002")), is (new Boolean(true)));
+			assertThat(new Boolean(actual.contains("M0003")), is (new Boolean(true)));
+			assertThat(new Integer(actual.size()), is (new Integer(3)));
 		} catch (MissingResourceException e) {
 			fail(e);
 		}
@@ -259,10 +259,10 @@ public class TestMessageFile extends TestCaseTemplate{
 		// メッセージ本文の一覧が返却されること
 		try {
 			List<String> actual = messageFile.getValueList();
-			assertThat(actual.contains(Locale.getDefault()+"のテストメッセージ{0}"), is (true));
-			assertThat(actual.contains(Locale.getDefault()+"のテストメッセージ{0},{1}"), is (true));
-			assertThat(actual.contains(Locale.getDefault()+"のテストメッセージ{0},{1},{2}"), is (true));
-			assertThat(actual.size(), is (3));
+			assertThat(new Boolean(actual.contains(Locale.getDefault()+"のテストメッセージ{0}")), is (new Boolean(true)));
+			assertThat(new Boolean(actual.contains(Locale.getDefault()+"のテストメッセージ{0},{1}")), is (new Boolean(true)));
+			assertThat(new Boolean(actual.contains(Locale.getDefault()+"のテストメッセージ{0},{1},{2}")), is (new Boolean(true)));
+			assertThat(new Integer(actual.size()), is (new Integer(3)));
 		} catch (MissingResourceException e) {
 			fail(e);
 		}
