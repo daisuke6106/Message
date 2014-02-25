@@ -18,7 +18,7 @@ class MessageFlyweight {
 
 	protected static Map<String, Map<Locale, MessageFile>> messageFileMap;
 
-	private MessageFlyweight() {}
+	protected MessageFlyweight() {}
 
 	static {
 		messageFileMap = new HashMap<String, Map<Locale, MessageFile>>();
@@ -46,6 +46,9 @@ class MessageFlyweight {
 		if (localMessageMap == null) {
 			localMessageMap = new HashMap<Locale, MessageFile>();
 			messageFileMap.put(baseName, localMessageMap);
+			MessageFile messageFile = new MessageFile(baseName, locale);
+			localMessageMap.put(locale, messageFile);
+			return messageFile;
 		}
 		MessageFile messageFile = localMessageMap.get(locale);
 		if (messageFile == null) {

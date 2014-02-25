@@ -9,7 +9,12 @@ import jp.co.dk.test.template.TestCaseTemplate;
 import org.junit.Test;
 
 public class TestMessageFlyweight extends TestCaseTemplate {
-
+	
+	@Test
+	public void constractor() {
+		MessageFlyweight sut = new MessageFlyweight();
+	}
+	
 	@Test
 	public void getInstance() {
 		// 空の状態でgetInstanceを実行した場合、キャッシュに保持された上でMessageFileインスタンスが返却されること。

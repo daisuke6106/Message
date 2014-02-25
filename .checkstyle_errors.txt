@@ -116,13 +116,12 @@ Starting audit...
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:8: Line has trailing spaces.
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:11: 行が 80 文字を超えています。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:13: Line has trailing spaces.
-/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:17: クラス MessageFlyweight は final として宣言すべきです。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:19:1: File contains tab characters (this is the first instance).
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:19:9: Javadoc コメントがありません。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:19:64: 変数 'messageFileMap' は private とし、アクセッサメソッドを持つべきです。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:9: Javadoc コメントがありません。
-/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:37: '{' の後にホワイトスペースがありません。
-/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:37: '}' の前にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:39: '{' の後にホワイトスペースがありません。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:21:39: '}' の前にホワイトスペースがありません。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:24: 行が 80 文字を超えています。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:26: Line has trailing spaces.
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:27: 最初の一文はピリオドで終わらなければなりません。
@@ -135,6 +134,7 @@ Starting audit...
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:44:53: Parameter baseName should be final.
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:44:70: Parameter locale should be final.
 /home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:45: 行が 80 文字を超えています。
+/home/dk/projects/Message/src/jp/co/dk/message/MessageFlyweight.java:49: 行が 80 文字を超えています。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:5: 最初の一文はピリオドで終わらなければなりません。
 /home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:7: Line has trailing spaces.
 /home/dk/projects/Message/src/jp/co/dk/message/MessageInterface.java:12: Line has trailing spaces.
