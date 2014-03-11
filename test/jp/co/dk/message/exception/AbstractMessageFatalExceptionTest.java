@@ -10,25 +10,25 @@ import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Test;
 
-public class TestAbstractMessageFatalException extends TestCaseTemplate {
+public class AbstractMessageFatalExceptionTest extends TestCaseTemplate {
 
 	@Test
 	public void constractor() {
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException1 = new DummyAbstractMessageFatalException(TestMessage.M0001);
-		assertEquals(DummyAbstractMessageFatalException1.getMessageObj(), TestMessage.M0001);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException1 = new DummyAbstractMessageFatalException(DummyMessage.M0001);
+		assertEquals(DummyAbstractMessageFatalException1.getMessageObj(), DummyMessage.M0001);
 		assertEquals(DummyAbstractMessageFatalException1.getMessage(), "デフォルトのテストメッセージ{0}");
 		assertEquals(DummyAbstractMessageFatalException1.getEmbeddedStrList().size(), 0);
 		assertNull(DummyAbstractMessageFatalException1.getThrowable());
 		
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException2 = new DummyAbstractMessageFatalException(TestMessage.M0001, "test");
-		assertEquals(DummyAbstractMessageFatalException2.getMessageObj(), TestMessage.M0001);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException2 = new DummyAbstractMessageFatalException(DummyMessage.M0001, "test");
+		assertEquals(DummyAbstractMessageFatalException2.getMessageObj(), DummyMessage.M0001);
 		assertEquals(DummyAbstractMessageFatalException2.getMessage(), "デフォルトのテストメッセージtest");
 		assertEquals(DummyAbstractMessageFatalException2.getEmbeddedStrList().size(), 1);
 		assertNull(DummyAbstractMessageFatalException2.getThrowable());
 		
 		String[] strs = {"test1", "test2"};
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException3 = new DummyAbstractMessageFatalException(TestMessage.M0002, strs);
-		assertEquals(DummyAbstractMessageFatalException3.getMessageObj(), TestMessage.M0002);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException3 = new DummyAbstractMessageFatalException(DummyMessage.M0002, strs);
+		assertEquals(DummyAbstractMessageFatalException3.getMessageObj(), DummyMessage.M0002);
 		assertEquals(DummyAbstractMessageFatalException3.getMessage(), "デフォルトのテストメッセージtest1,test2");
 		assertEquals(DummyAbstractMessageFatalException3.getEmbeddedStrList().size(), 2);
 		assertNull(DummyAbstractMessageFatalException3.getThrowable());
@@ -37,8 +37,8 @@ public class TestAbstractMessageFatalException extends TestCaseTemplate {
 		strList.add("test1");
 		strList.add("test2");
 		strList.add("test3");
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException4 = new DummyAbstractMessageFatalException(TestMessage.M0003, strList);
-		assertEquals(DummyAbstractMessageFatalException4.getMessageObj(), TestMessage.M0003);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException4 = new DummyAbstractMessageFatalException(DummyMessage.M0003, strList);
+		assertEquals(DummyAbstractMessageFatalException4.getMessageObj(), DummyMessage.M0003);
 		assertEquals(DummyAbstractMessageFatalException4.getMessage(), "デフォルトのテストメッセージtest1,test2,test3");
 		assertEquals(DummyAbstractMessageFatalException4.getEmbeddedStrList().size(), 3);
 		assertNull(DummyAbstractMessageFatalException4.getThrowable());
@@ -48,23 +48,23 @@ public class TestAbstractMessageFatalException extends TestCaseTemplate {
 	public void constractorWithThrowable() {
 		IllegalArgumentException sampleException = new IllegalArgumentException();
 		
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException1 = new DummyAbstractMessageFatalException(TestMessage.M0001, sampleException);
-		assertEquals(DummyAbstractMessageFatalException1.getMessageObj(), TestMessage.M0001);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException1 = new DummyAbstractMessageFatalException(DummyMessage.M0001, sampleException);
+		assertEquals(DummyAbstractMessageFatalException1.getMessageObj(), DummyMessage.M0001);
 		assertEquals(DummyAbstractMessageFatalException1.getMessage(), "デフォルトのテストメッセージ{0}");
 		assertEquals(DummyAbstractMessageFatalException1.getEmbeddedStrList().size(), 0);
 		assertNotNull(DummyAbstractMessageFatalException1.getThrowable());
 		assertEquals(DummyAbstractMessageFatalException1.getThrowable(), sampleException);
 		
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException2 = new DummyAbstractMessageFatalException(TestMessage.M0001, "test", sampleException);
-		assertEquals(DummyAbstractMessageFatalException2.getMessageObj(), TestMessage.M0001);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException2 = new DummyAbstractMessageFatalException(DummyMessage.M0001, "test", sampleException);
+		assertEquals(DummyAbstractMessageFatalException2.getMessageObj(), DummyMessage.M0001);
 		assertEquals(DummyAbstractMessageFatalException2.getMessage(), "デフォルトのテストメッセージtest");
 		assertEquals(DummyAbstractMessageFatalException2.getEmbeddedStrList().size(), 1);
 		assertNotNull(DummyAbstractMessageFatalException2.getThrowable());
 		assertEquals(DummyAbstractMessageFatalException1.getThrowable(), sampleException);
 		
 		String[] strs = {"test1", "test2"};
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException3 = new DummyAbstractMessageFatalException(TestMessage.M0002, strs, sampleException);
-		assertEquals(DummyAbstractMessageFatalException3.getMessageObj(), TestMessage.M0002);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException3 = new DummyAbstractMessageFatalException(DummyMessage.M0002, strs, sampleException);
+		assertEquals(DummyAbstractMessageFatalException3.getMessageObj(), DummyMessage.M0002);
 		assertEquals(DummyAbstractMessageFatalException3.getMessage(), "デフォルトのテストメッセージtest1,test2");
 		assertEquals(DummyAbstractMessageFatalException3.getEmbeddedStrList().size(), 2);
 		assertNotNull(DummyAbstractMessageFatalException3.getThrowable());
@@ -74,8 +74,8 @@ public class TestAbstractMessageFatalException extends TestCaseTemplate {
 		strList.add("test1");
 		strList.add("test2");
 		strList.add("test3");
-		DummyAbstractMessageFatalException DummyAbstractMessageFatalException4 = new DummyAbstractMessageFatalException(TestMessage.M0003, strList, sampleException);
-		assertEquals(DummyAbstractMessageFatalException4.getMessageObj(), TestMessage.M0003);
+		DummyAbstractMessageFatalException DummyAbstractMessageFatalException4 = new DummyAbstractMessageFatalException(DummyMessage.M0003, strList, sampleException);
+		assertEquals(DummyAbstractMessageFatalException4.getMessageObj(), DummyMessage.M0003);
 		assertEquals(DummyAbstractMessageFatalException4.getMessage(), "デフォルトのテストメッセージtest1,test2,test3");
 		assertEquals(DummyAbstractMessageFatalException4.getEmbeddedStrList().size(), 3);
 		assertNotNull(DummyAbstractMessageFatalException4.getThrowable());

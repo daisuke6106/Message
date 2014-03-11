@@ -7,7 +7,7 @@ import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Test;
 
-public class TestAbstractMessage extends TestCaseTemplate{
+public class AbstractMessageTest extends TestCaseTemplate{
 	
 	@Test
 	public void getMessageId() {

@@ -11,7 +11,7 @@ import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Test;
 
-public class TestMessageFile extends TestCaseTemplate{
+public class MessageFileTest extends TestCaseTemplate{
 
 	@Test
 	public void constractor() {
@@ -34,7 +34,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 拡張子ありのファイル名を渡した場合、正常に読み込めること
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties");
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties");
 			assertEquals(messageFile.getMessage("M0001"), "ja_JPのテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -42,7 +42,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 拡張子なしのファイル名を渡した場合、正常に読み込めること
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage");
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage");
 			assertEquals(messageFile.getMessage("M0001"), "ja_JPのテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -77,7 +77,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 拡張子ありのファイル名を渡した場合、正常に読み込めること
 		try {
-			MessageFile messageFile = new MessageFile(new File("jp/co/dk/message/TestMessage.properties"));
+			MessageFile messageFile = new MessageFile(new File("jp/co/dk/message/DummyMessage.properties"));
 			assertEquals(messageFile.getMessage("M0001"), Locale.getDefault()+"のテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -85,7 +85,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 拡張子なしのファイル名を渡した場合、正常に読み込めること
 		try {
-			MessageFile messageFile = new MessageFile(new File("jp/co/dk/message/TestMessage"));
+			MessageFile messageFile = new MessageFile(new File("jp/co/dk/message/DummyMessage"));
 			assertEquals(messageFile.getMessage("M0001"), Locale.getDefault()+"のテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -104,7 +104,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		// NULLを渡した場合、例外が送出されること。
 		try {
 			Locale nullLocal  = null;
-			new MessageFile("jp/co/dk/message/TestMessage.properties", nullLocal);
+			new MessageFile("jp/co/dk/message/DummyMessage.properties", nullLocal);
 			fail();
 		} catch (IllegalArgumentException e) {
 			assertEquals(e.getMessage(), "Local is not set.");
@@ -113,7 +113,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		// NULLを渡した場合、例外が送出されること。
 		try {
 			Locale nullLocal  = null;
-			new MessageFile(new File("jp/co/dk/message/TestMessage.properties"), nullLocal);
+			new MessageFile(new File("jp/co/dk/message/DummyMessage.properties"), nullLocal);
 			fail();
 		} catch (IllegalArgumentException e) {
 			assertEquals(e.getMessage(), "Local is not set.");
@@ -121,7 +121,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// ENGLISHのロケールにてインスタンスを生成した場合、enのロケールファイルをよみこむこと
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties", Locale.ENGLISH);
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties", Locale.ENGLISH);
 			assertEquals(messageFile.getMessage("M0001"), "enのテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -129,7 +129,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// USのロケールにてインスタンスを生成した場合、en_USのロケールファイルをよみこむこと
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties", Locale.US);
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties", Locale.US);
 			assertEquals(messageFile.getMessage("M0001"), "en_USのテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -137,7 +137,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// CANADAのロケールにてインスタンスを生成した場合、enのロケールファイルをよみこむこと
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties", Locale.CANADA);
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties", Locale.CANADA);
 			assertEquals(messageFile.getMessage("M0001"), "enのテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -145,7 +145,7 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 定義されていないのロケールにてインスタンスを生成した場合、現在のロケールファイルをよみこむこと
 		try {
-			MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties", Locale.FRANCE);
+			MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties", Locale.FRANCE);
 			assertEquals(messageFile.getMessage("M0001"), Locale.getDefault()+"のテストメッセージ{0}");
 		} catch (IllegalArgumentException e) {
 			fail(e);
@@ -154,7 +154,7 @@ public class TestMessageFile extends TestCaseTemplate{
 	
 	@Test
 	public void getMessage() {
-		MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties");
+		MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties");
 		
 		// NULLを渡した場合、例外が送出されること。
 		try {
@@ -238,7 +238,7 @@ public class TestMessageFile extends TestCaseTemplate{
 	
 	@Test
 	public void getKeyList() {
-		MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties");
+		MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties");
 		
 		// メッセージIDの一覧が返却されること
 		try {
@@ -254,7 +254,7 @@ public class TestMessageFile extends TestCaseTemplate{
 	
 	@Test
 	public void getValueList() {
-		MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties");
+		MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties");
 		
 		// メッセージ本文の一覧が返却されること
 		try {
@@ -270,7 +270,7 @@ public class TestMessageFile extends TestCaseTemplate{
 	
 	@Test
 	public void getBaseName() {
-		MessageFile messageFile = new MessageFile("jp/co/dk/message/TestMessage.properties");
+		MessageFile messageFile = new MessageFile("jp/co/dk/message/DummyMessage.properties");
 		
 		// NULLを渡した場合、例外が送出されること。
 		try {
@@ -298,28 +298,28 @@ public class TestMessageFile extends TestCaseTemplate{
 		
 		// 引数にスラッシュが含まれていた場合、.に変換し、返却されること、拡張子が削除されていること
 		try {
-			assertEquals(messageFile.getBaseName("jp/co/dk/message/TestMessage.properties"), "jp.co.dk.message.TestMessage");
+			assertEquals(messageFile.getBaseName("jp/co/dk/message/DummyMessage.properties"), "jp.co.dk.message.DummyMessage");
 		} catch (IllegalArgumentException e) {
 			fail(e);
 		}
 		
 		// 引数にバックスラッシュが含まれていた場合、.に変換し、返却されること、拡張子が削除されていること
 		try {
-			assertEquals(messageFile.getBaseName("jp\\co\\dk\\message\\TestMessage.properties"), "jp.co.dk.message.TestMessage");
+			assertEquals(messageFile.getBaseName("jp\\co\\dk\\message\\DummyMessage.properties"), "jp.co.dk.message.DummyMessage");
 		} catch (IllegalArgumentException e) {
 			fail(e);
 		}
 		
 		// 引数に拡張子が削除されていたとしても、正常に処理が行われること。
 		try {
-			assertEquals(messageFile.getBaseName("jp\\co\\dk\\message\\TestMessage"), "jp.co.dk.message.TestMessage");
+			assertEquals(messageFile.getBaseName("jp\\co\\dk\\message\\DummyMessage"), "jp.co.dk.message.DummyMessage");
 		} catch (IllegalArgumentException e) {
 			fail(e);
 		}
 		
 		// 引数にドットが複数設定されていた場合、例外が発生すること
 		try {
-			messageFile.getBaseName("jp.co.dk.message.TestMessage");
+			messageFile.getBaseName("jp.co.dk.message.DummyMessage");
 			fail();
 		} catch (IllegalArgumentException e) {
 			assertEquals(e.getMessage(), "Dot has multiple definitions. Please specify a backslash or slash directory");

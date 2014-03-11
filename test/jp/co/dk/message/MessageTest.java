@@ -9,24 +9,24 @@ import mockit.Expectations;
 
 import org.junit.Test;
 
-public class TestCaseMessage {
+public class MessageTest {
 	
 	@Test
 	public void getMessageId() {
-		assertEquals(TestMessage.M0001.getMessageId(), "M0001");
+		assertEquals(DummyMessage.M0001.getMessageId(), "M0001");
 		
 	}
 	
 	@Test
 	public void getMessage() {
-		String message1a = TestMessage.M0001.getMessage();
-		String message1b = TestMessage.M0001.getMessage("梅文字");
-		String message2  = TestMessage.M0002.getMessage(new String[]{"文字１","文字２"});
+		String message1a = DummyMessage.M0001.getMessage();
+		String message1b = DummyMessage.M0001.getMessage("梅文字");
+		String message2  = DummyMessage.M0002.getMessage(new String[]{"文字１","文字２"});
 		List<String> list = new ArrayList<String>();
 		list.add("文字1");
 		list.add("文字2");
 		list.add("文字3");
-		String message3 = TestMessage.M0003.getMessage(list);
+		String message3 = DummyMessage.M0003.getMessage(list);
 		
 		// プロパティ=-Duser.language=ja -Duser.country=JP
 		String testMessage1a = "ja_JPのテストメッセージ{0}";
