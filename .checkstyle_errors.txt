@@ -1,4 +1,5 @@
 Starting audit...
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:3:8: 使用されないインポートです - java.io.File。
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:25: 行が 80 文字を超えています。
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:27: 行が 80 文字を超えています。
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:29: Line has trailing spaces.
@@ -26,27 +27,27 @@ Starting audit...
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:116: Line has trailing spaces.
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:119:35: Parameter messageId should be final.
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:119:42: 'messageId' がフィールドを隠しています。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:125: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:126: 最初の一文はピリオドで終わらなければなりません。
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:128: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:129: 最初の一文はピリオドで終わらなければなりません。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:131: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:133: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:137:35: Parameter file should be final.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:137:48: Parameter messageId should be final.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:137:55: 'messageId' がフィールドを隠しています。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:141: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:142:9: メソッド 'getMessageId' は拡張するように設計されていません - abstract か final か空である必要があります。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:146: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:147:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:151: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:152:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:153:34: Parameter str should be final.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:158: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:159:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:160:34: Parameter str should be final.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:161: 行が 80 文字を超えています。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:163: Line has trailing spaces.
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:164:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
-/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:165:34: Parameter list should be final.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:130: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:134:35: Parameter file should be final.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:134:48: Parameter messageId should be final.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:134:55: 'messageId' がフィールドを隠しています。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:138: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:139:9: メソッド 'getMessageId' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:143: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:144:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:148: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:149:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:150:34: Parameter str should be final.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:155: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:156:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:157:34: Parameter str should be final.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:158: 行が 80 文字を超えています。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:160: Line has trailing spaces.
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:161:9: メソッド 'getMessage' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/AbstractMessage.java:162:34: Parameter list should be final.
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/MessageFile.java:10: 最初の一文はピリオドで終わらなければなりません。
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/MessageFile.java:11: Line has trailing spaces.
 /home/dk/github_workspace/Message/src/main/java/jp/co/dk/message/MessageFile.java:15: Line has trailing spaces.
