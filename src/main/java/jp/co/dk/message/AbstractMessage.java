@@ -121,9 +121,6 @@ public abstract class AbstractMessage implements MessageInterface {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.getClass().getSimpleName());
 		this.messageFile = MessageFlyweight.getInstance(sb.toString());
-		System.out.println(sb.toString() + "で読み込みました");
-		File file = new File("/tmp/testm");
-		file.mkdir();
 	}
 	
 	/**
