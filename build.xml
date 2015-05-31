@@ -8,9 +8,12 @@
  	
 	<property name="ant_commons.target.spacer.start" value="[START]=========================================================================================================="/>
 	<property name="ant_commons.target.spacer.fin"   value="[FIN]  =========================================================================================================="/>
+	
+	<!-- 本プロジェクト設定ファイル読み込み -->
+	<property file="./build_project.properties"/>
 
 	<!-- 本プロジェクト環境設定ファイル読み込み -->
-	<property file="./build.env"/>
+	<property file="./build_env.properties"/>
 
 	<!-- 本プロジェクトプロパティファイル読み込み -->
 	<property file="./build.properties"/>
@@ -345,6 +348,7 @@
 		  	<classpath>
 		  		<pathelement path="${test_execute.junit.classpath.pathelement.location.test_properties}" />
 		  		<pathelement path="${test_execute.junit.classpath.pathelement.location.test_message}" />
+		  		<pathelement path="${test_execute.junit.classpath.pathelement.location.test_resources}" />
 		  		<pathelement path="${test_execute.junit.classpath.pathelement.location.test_jar}" />
 		  		<pathelement path="${test_execute.junit.classpath.pathelement.location.jar}" />
 		  		<pathelement path="${_test.library.jars}" />
