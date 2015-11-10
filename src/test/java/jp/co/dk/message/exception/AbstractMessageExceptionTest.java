@@ -86,6 +86,8 @@ public class AbstractMessageExceptionTest extends TestCaseTemplate {
 
 class DummyAbstractMessageException extends AbstractMessageException {
 
+	private static final long serialVersionUID = -7819467041894651115L;
+
 	public DummyAbstractMessageException(MessageInterface msg) {
 		super(msg);
 	}
